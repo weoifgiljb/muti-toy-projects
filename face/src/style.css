@@ -1,0 +1,126 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f7f7f5;
+  /* Light off-white */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  width: 100%;
+  height: 100%;
+}
+
+canvas {
+  display: block;
+}
+
+/* Control Panel */
+#controls {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 20px 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  z-index: 10;
+  font-family: 'Inter', sans-serif;
+}
+
+#control-form {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #666;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+select {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  font-family: inherit;
+  font-size: 14px;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+select:hover {
+  border-color: #bbb;
+}
+
+select:focus {
+  border-color: #888;
+}
+
+/* Slider styling */
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100px;
+  background: transparent;
+  margin-top: 5px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: #333;
+  cursor: pointer;
+  margin-top: -5px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: #ddd;
+  border-radius: 2px;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+button {
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 18px;
+  /* Align with inputs */
+  transition: all 0.2s;
+  /* display: none; Removed to show button */
+}

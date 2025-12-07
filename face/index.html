@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurora Face</title>
+  <link rel="stylesheet" href="./src/style.css" />
+  <script type="importmap">
+      {
+        "imports": {
+          "three": "https://esm.sh/three@0.170.0",
+          "three/addons/": "https://esm.sh/three@0.170.0/examples/jsm/"
+        }
+      }
+    </script>
+</head>
+
+<body>
+  <div id="app"></div>
+
+  <!-- UI Control Panel -->
+  <div id="controls">
+    <form id="control-form">
+      <label>
+        <span>Emotion</span>
+        <select id="emotion-select">
+          <option value="neutral">Neutral</option>
+          <option value="happy" selected>Happy</option>
+          <option value="surprised">Surprised</option>
+          <option value="angry">Angry</option>
+          <option value="suspicious">Suspicious</option>
+          <option value="sad">Sad</option>
+          <option value="cry">Cry</option>
+        </select>
+      </label>
+
+      <label>
+        <span>Aura</span>
+        <select id="color-select">
+          <option value="aurora" selected>Aurora</option>
+          <option value="fire">Fire</option>
+          <option value="ocean">Ocean</option>
+          <option value="nature">Nature</option>
+          <option value="mystic">Mystic</option>
+        </select>
+      </label>
+
+      <label>
+        <span>Intensity</span>
+        <input type="range" id="intensity-range" min="0.2" max="2.0" step="0.1" value="1.0">
+      </label>
+
+      <label>
+        <span>Speed</span>
+        <input type="range" id="speed-range" min="0.0" max="3.0" step="0.1" value="1.0">
+      </label>
+      <button type="submit" id="random-btn">Randomize</button>
+    </form>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>
